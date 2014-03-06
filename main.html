@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>전공마당 테스트페이지</title>
+  <style>
+  body {
+    padding: 50px 200px;
+  }
+  </style>
+</head>
+<body>
+
+
+<!--
+## Before deploy to SNUCSE
+
+1.  "bookshelf.png" -> "[?bookshelf.png?]"
+
+    "bookshelf-top.png" -> "[?bookshelf-top.png?]"
+
+2.  http://~ -> //~
+-->
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.csepds {
+  width: 796px;
+
+  box-shadow: 0 0 15px 3px black;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.csepds * { box-sizing: border-box; }
+
+/* Shelf-top */
+.csepds > div:first-child {
+  background-image: url("bookshelf-top.png");
+  height: 64px;
+}
+/* Shelf */
+.csepds > div {
+  background-image: url("bookshelf.png");
+  height: 194px;
+  
+  position: relative;
+  text-align: center;
+}
+
+/* Books */
+.csepds > div > a {
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  
+  position: absolute;
+  bottom: 20px;
+  
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  border-color: black;
+  background-color: white;
+  color: black;
+  
+  font-size: 16px;
+  text-decoration: none;
+}
+.csepds > div > a > h1 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+</style>
+
+<!-- Markup -->
+<div class="csepds">
+  <div></div>
+</div>
+
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+  var db = [
+    { groupname:"", entities:[
+      { title:"ETL", desc:"교수학습\n개발센터", link:"http://etl.snu.ac.kr" },
+      { title:"mySNU", desc:"서울대학교\n포털", link:"http://my.snu.ac.kr" },
+      { title:"중앙도서관", link:"http://library.snu.ac.kr" },
+      { title:"전공학술부", desc:"컴퓨터공학부\n학생회", link:"//www.snucse.org/toor" },
+    ]},
+    { groupname:"1", entities:[
+      { title:"컴퓨터의\n개념 및 실습", desc:"민상렬\n교수님", link:"http://archi.snu.ac.kr/courses/under/14_spring_computer_concept/" },
+    ]},
+    { groupname:"2", entities:[
+      { title:"공업수학 2", desc:"권태경\n교수님", link:"http://mmlab.snu.ac.kr/xe/?mid=course_under/" },
+      { title:"자료구조", desc:"문병로\n교수님", link:"http://soar.snu.ac.kr/course/ds/20141/" },
+      { title:"자료구조", desc:"Satti\n교수님", link:"http://tcs.snu.kr/courses/ds2014/" },
+      { title:"이산수학", desc:"Satti\n교수님", link:"http://tcs.snu.kr/courses/dm2014/" },
+      { title:"정보통신융합", desc:"권태경\n교수님", link:"http://mmlab.snu.ac.kr/xe/?mid=course_under" },
+      { title:"컴퓨터\n프로그래밍", desc:"엄현상\n교수님", link:"http://dcslab.snu.ac.kr/courses.php" },
+      { title:"논리설계", desc:"이창건\n교수님", link:"http://rubis.snu.ac.kr/courses/7499" },
+      { title:"논리설계", desc:"장래혁\n교수님" },
+      { title:"논리설계실험", desc:"이창건\n교수님", link:"http://rubis.snu.ac.kr/courses/7489" },
+      { title:"논리설계실험", desc:"장래혁\n교수님" },
+    ]},
+    { groupname:"3", entities:[
+      { title:"시스템\n프로그래밍", desc:"엄헌영\n교수님", link:"http://dcslab.snu.ac.kr/courses.php" },
+      { title:"데이타베이스", desc:"문봉기\n교수님", link:"http://dbs.snu.ac.kr/courses.html" },
+      { title:"데이타통신", desc:"전화숙\n교수님", link:"http://mccl.snu.ac.kr/Courses02_2.php" },
+      { title:"운영체제", desc:"조유근\n교수님", link:"http://ssrnet.snu.ac.kr/course/os2014-1/index.htm" },
+      { title:"컴퓨터구조", desc:"김지홍\n교수님", link:"http://cares.snu.ac.kr/?view=contents&menuN=310" },
+      { title:"프로그래밍\n언어", desc:"이재진\n교수님" },
+      { title:"데이터마이닝과 정보검색", desc:"장병탁\n교수님", link:"http://bi.snu.ac.kr/" },
+      { title:"선형 및 비선형 계산모델", desc:"김명수\n교수님", link:"http://3map.snu.ac.kr/" },
+      { title:"알고리즘", desc:"박근수\n교수님", link:"http://theory.snu.ac.kr/?page_id=106" },
+    ]},
+    { groupname:"4", entities:[
+      { title:"컴퓨터\n융합응용", desc:"민상렬\n교수님", link:"http://archi.snu.ac.kr/courses/under/14_spring_computer_convergence/" },
+      { title:"멀티코어\n컴퓨팅", desc:"이재진\n교수님" },
+      { title:"프로젝트 2", link:"http://meslab.snu.ac.kr/courses/2014s/project/" },
+      { title:"인공지능", desc:"장병탁\n교수님", link:"http://bi.snu.ac.kr/" },
+      { title:"VLSI 회로", desc:"전주식\n교수님" },
+      { title:"소프트웨어\n응용", desc:"신완균\n교수님" },
+      { title:"컴퓨터\n그래픽스", desc:"이제희\n교수님", link:"http://mrl.snu.ac.kr/" },
+      { title:"IT-리더십\n세미나", desc:"신영길\n교수님" },
+      { title:"컴퓨터엔지니어를 위한 기술영어작문", desc:"McKay\n교수님", link:"https://sc.snu.ac.kr/sclab/doku.php?id=education:courses" },
+      { title:"인간컴퓨터\n상호작용", desc:"서진욱\n교수님" },
+      { title:"소셜 네트워크\n분석", desc:"김종권\n교수님", link:"http://popeye.snu.ac.kr/" },
+    ]},
+  ];
+
+  $.each( db, function(n, group) {
+    var count = group.entities.length;
+    
+    var $shelf = $("<div>");
+    $.each( group.entities, function(i, entity) {
+      var title = entity.title ? entity.title.replace(/\n/g, "<br>") : "";
+      var desc = entity.desc ? entity.desc.replace(/\n/g, "<br>") : "";
+      $("<a>")
+      .css({ left : 30+i*150 })
+      .attr(entity.link ? { href : entity.link } : {})
+      .append($("<h1>").html(title))
+      .append(desc)
+      .appendTo($shelf);
+    });
+    $shelf.appendTo(".csepds");
+  });
+});
+</script>
+
+</body>
+</html>
