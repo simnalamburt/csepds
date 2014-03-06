@@ -152,27 +152,37 @@ $(document).ready(function() {
   ];
 
   $.each( db, function(n, group) {
-    var count = group.entities.length;
-    
-    var $shelf = $("<div>");
-
+    var $shelf = $("<div>").appendTo(".csepds");
+  
     if(group.groupname) {
-      $("<span>")
-      .text(group.groupname)
-      .appendTo($shelf);
+      $("<span>").appendTo($shelf)
+      .text(group.groupname);
+    }
+
+    var count = group.entities.length;
+    function offset(i) {
+      if(count <= 6) {
+        return 250 - count*40 + i*150;
+      } else {
+        if(i<6) return 30 + i*125;
+        else return 70 + (i%6)*125;
+      }
     }
 
     $.each( group.entities, function(i, entity) {
       var title = entity.title ? entity.title.replace(/\n/g, "<br>") : "";
       var desc = entity.desc ? entity.desc.replace(/\n/g, "<br>") : "";
-      $("<a>")
-      .css({ left : 30+i*150 })
+      
+      $("<a>").appendTo($shelf)
+      .css({ left : offset(i) })
       .attr(entity.link ? { href : entity.link } : {})
       .append($("<h1>").html(title))
-      .append(desc)
-      .appendTo($shelf);
+      .append(desc);
+        
+      if(i%6 == 5) {
+        $shelf = $("<div>").appendTo(".csepds");
+      }
     });
-    $shelf.appendTo(".csepds");
   });
 });
 </script>
