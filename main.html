@@ -41,7 +41,7 @@
 .csepds > div {
   background-image: url("bookshelf.png");
   height: 194px;
-  
+
   position: relative;
   text-align: center;
 }
@@ -69,17 +69,17 @@
   display: block;
   width: 100px;
   height: 140px;
-  
+
   position: absolute;
   bottom: 20px;
-  
+
   border-style: solid;
   border-width: 2px;
   border-radius: 9px;
   border-color: black;
   background-color: white;
   color: black;
-  
+
   font-size: 16px;
 
   transition: box-shadow 0.3s;
@@ -153,7 +153,7 @@ $(document).ready(function() {
 
   $.each( db, function(n, group) {
     var $shelf = $("<div>").appendTo(".csepds");
-  
+
     if(group.groupname) {
       $("<span>").appendTo($shelf)
       .text(group.groupname);
@@ -172,13 +172,13 @@ $(document).ready(function() {
     $.each( group.entities, function(i, entity) {
       var title = entity.title ? entity.title.replace(/\n/g, "<br>") : "";
       var desc = entity.desc ? entity.desc.replace(/\n/g, "<br>") : "";
-      
+
       $("<a>").appendTo($shelf)
       .css({ left : offset(i) })
       .attr(entity.link ? { href : entity.link } : {})
       .append($("<h1>").html(title))
       .append(desc);
-        
+
       if(i%6 == 5) {
         $shelf = $("<div>").appendTo(".csepds");
       }
