@@ -57,6 +57,7 @@
   color: black;
 
   font-size: 16px;
+  word-break: keep-all;
 
   transition: box-shadow 0.3s;
 }
