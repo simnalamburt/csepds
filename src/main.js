@@ -104,5 +104,5 @@ const Bookshelf = ({data}) => {
 
 ReactDOM.render(
   <Bookshelf data={data} />,
-  document.getElementById('target')
+  document.getElementById('_csepds_target')
 );
