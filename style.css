@@ -1,0 +1,69 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.csepds {
+  width: 796px;
+
+  box-shadow: 0 0 15px 3px black;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.csepds * { box-sizing: border-box; }
+
+/* Shelf-top */
+.csepds > div:first-child {
+  background-image: url("bookshelf-top.png");
+  height: 64px;
+}
+/* Shelf */
+.csepds > div {
+  background-image: url("bookshelf.png");
+  height: 194px;
+
+  position: relative;
+  text-align: center;
+}
+
+/* Shelf tag */
+.csepds > div > span {
+  display: block;
+  width: 80px;
+  height: 30px;
+
+  position: absolute;
+  top: 0px;
+  left: 14px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  line-height: 30px;
+}
+
+/* Books */
+.csepds a:link, .csepds a:visited,
+.csepds a:hover, .csepds a:active { text-decoration: none !important; }
+.csepds > div > a {
+  display: block;
+  width: 100px;
+  height: 140px;
+
+  position: absolute;
+  bottom: 20px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  border-color: black;
+  background-color: white;
+  color: black;
+
+  font-size: 16px;
+
+  transition: box-shadow 0.3s;
+}
+.csepds > div > a:hover { box-shadow: 0 0 10px 5px white; }
+
+.csepds > div > a > h1 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
