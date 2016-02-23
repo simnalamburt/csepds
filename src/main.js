@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './main.css'
+import './main.styl'
 
 
 const data = Object.freeze([
