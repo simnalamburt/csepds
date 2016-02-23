@@ -1,11 +1,28 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css)
 
-body { padding: 50px 200px }
+body
+  margin: 0
+  background: #ccc
+
+#_csepds_target
+  max-width: 1000px
+  margin: 0 auto
+  background: white
+
+  &:before, &:after
+    content: ''
+    display: table
+    clear: both
+
+.github-corner > svg
+  z-index: 1
 
 .csepds
   width: 796px
-  box-shadow: 0 0 15px 3px black
+  margin: 60px auto 30px
   * { box-sizing: border-box }
+
+  box-shadow: 0 0 15px 3px black
 
   font-family: 'Noto Sans KR', sans-serif
 
@@ -38,7 +55,7 @@ body { padding: 50px 200px }
       line-height: 30px
 
     // Books
-    > a
+    > button
       display: block
       width: 100px
       height: 140px
@@ -46,20 +63,17 @@ body { padding: 50px 200px }
       position: absolute
       bottom: 20px
 
-      border-style: solid
-      border-width: 2px
+      border-style: none
       border-radius: 9px
-      border-color: black
-      background-color: white
-      color: black
+      outline: none
+      cursor: pointer
 
       font-size: 16px
       word-break: keep-all
 
-      &:link, &:visited, &:hover, &:active { text-decoration: none !important }
-
-      transition: box-shadow 0.3s
-      &:hover { box-shadow: 0 0 10px 5px white }
+      background-color: rgba(255, 255, 255, 0.75)
+      transition: background-color 0.3s
+      &:hover { background-color: white }
 
       > h1
         font-size: 1em
