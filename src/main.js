@@ -18,6 +18,7 @@ const data = Object.freeze([
     { title:"공업수학 2", desc:"권태경", link:"http://mmlab.snu.ac.kr/courses/2014_spring_engineering_mathematics/" },
     { title:"자료구조", desc:"문병로", link:"http://soar.snu.ac.kr/course/ds/20141/" },
     { title:"자료구조", desc:"Satti", link:"http://tcs.snu.kr/courses/ds2014/" },
+    { title:"이산수학", desc:"김건희", link:"https://sites.google.com/a/vision.snu.ac.kr/4190101-16s/" },
     { title:"이산수학", desc:"Satti", link:"http://tcs.snu.kr/courses/dm2014/" },
     { title:"정보통신융합", desc:"권태경", link:"http://mmlab.snu.ac.kr/xe/?mid=course_under" },
     { title:"컴퓨터 프로그래밍", desc:"엄현상", link:"http://dcslab.snu.ac.kr/courses.php" },
