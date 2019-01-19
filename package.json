@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "build": "NODE_ENV=production webpack -p",
-    "start": "webpack-dev-server"
+    "build": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
     "babel-loader": "^6.2.3",
@@ -14,8 +13,7 @@
     "file-loader": "^0.8.5",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.5.1",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^1.12.13"
   },
   "dependencies": {
     "react": "^15",

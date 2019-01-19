@@ -9,7 +9,4 @@ yarn
 # Build
 yarn build
 open index.html
-
-# See http://localhost:8080/webpack-dev-server/
-yarn start
 ```
