@@ -1,7 +1,7 @@
 {
   "scripts": {
     "gatsby": "sucrase-node ./node_modules/gatsby/dist/bin/gatsby.js",
-    "build": "npm run gatsby -- build",
+    "build": "npm run gatsby -- build --prefix-paths",
     "dev": "npm run gatsby -- develop"
   },
   "dependencies": {
