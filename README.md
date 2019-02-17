@@ -3,10 +3,13 @@
 링크를 누르면 강의홈페이지로 연결되는 페이지
 
 ```bash
-# Install dependencies
+# install dependencies
 yarn
 
-# Build
+# dev server
+yarn dev
+open 'http://localhost:8000/'
+
+# build
 yarn build
-open index.html
 ```

@@ -1,7 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './main.styl'
+import './index.styl'
 
+import shelf from './shelf.png'
+import shelfTop from './shelf-top.png'
 
 const data = Object.freeze([
   { entities:[
@@ -51,7 +52,6 @@ const data = Object.freeze([
   ]}
 ]);
 
-
 const Floor = ({floor, tag, id}) => {
   const click = course => {
     return () => window.open(course.link);
@@ -86,7 +86,7 @@ function chunk<T>(input: Array<T>, size: number): Array<Array<T>> {
   return ret;
 }
 
-const Bookshelf = ({data}) => {
+const Bookshelf = () => {
   const floors = data.map((group, group_id) =>
     chunk(group.entities, 6).map((floor, floor_id) => {
       const id = `${group_id}.${floor_id}`;
@@ -106,8 +106,4 @@ const Bookshelf = ({data}) => {
   );
 };
 
-
-ReactDOM.render(
-  <Bookshelf data={data}/>,
-  document.getElementById('_csepds_target')
-);
+export default Bookshelf
