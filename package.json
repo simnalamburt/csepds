@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop"
