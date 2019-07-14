@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.styl";
+import "./index.scss";
 
 import shelf from "./shelf.png";
 import shelfTop from "./shelf-top.png";
