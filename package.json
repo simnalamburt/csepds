@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "gatsby": "sucrase-node ./node_modules/gatsby/dist/bin/gatsby.js",
-    "build": "npm run gatsby -- build --prefix-paths",
-    "dev": "npm run gatsby -- develop"
+    "build": "gatsby build --prefix-paths",
+    "dev": "gatsby develop"
   },
   "dependencies": {
     "gatsby": "^2.1.4",
@@ -10,7 +9,6 @@
     "gatsby-plugin-typescript": "^2.0.8",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "sass": "^1.22.4",
-    "sucrase": "^3.9.5"
+    "sass": "^1.22.4"
   }
 }
